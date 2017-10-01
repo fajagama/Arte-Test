@@ -1,5 +1,8 @@
 #pragma once
 #include <SDL.h>
+#include <SDL_image.h>
+#include "GameObject.h"
+#include <list>
 
 using namespace std;
 
@@ -9,7 +12,7 @@ public:
 	Core(char* window_name);
 	~Core();
 	void run(); 
-
+	void addGameObject(GameObject go);
 private:
 	SDL_Window* window;
 	SDL_Renderer* renderer;
@@ -22,4 +25,6 @@ private:
 	void update();
 	void handleEvents();
 	void clean();
+
+	list<GameObject> game_objects;
 };
