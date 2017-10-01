@@ -1,8 +1,8 @@
 #include "Time.h"
 
-int Time::frame_start = 0;
-int Time::frame_end = 0;
-int Time::time_start = 0;
+int unsigned Time::frame_start = 0;
+int unsigned Time::frame_end = 0;
+int unsigned Time::time_start = 0;
 
 Time::Time()
 {
@@ -12,11 +12,11 @@ Time::~Time()
 {
 }
 
-int Time::GetDeltaTime() {
+int unsigned Time::GetDeltaTime() {
 	return frame_end - frame_start;
 }
 
-int Time::GetTime() {
+int unsigned Time::GetTime() {
 	return SDL_GetTicks() - time_start;
 }
 
