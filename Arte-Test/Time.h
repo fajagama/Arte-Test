@@ -6,7 +6,7 @@ class Time
 public:
 	Time();
 	~Time();
-
+	//todo muze být voláno i bìhem update takže se bude muset zajistit aby se vratila spravna hodnota
 	static unsigned int GetDeltaTime();
 	static unsigned int GetTime();
 	static void FrameStart();

@@ -17,8 +17,9 @@ private:
 	SDL_Window* window;
 	SDL_Renderer* renderer;
 	bool running;
-	const int FPS = 60;
-	const int DELAY_TIME = 1000.0f / FPS;
+	const int max_FPS = 60;
+	const int backgrounf_FPS = 15;
+	int current_FPS;
 
 	void init(char* window_name);
 	void render();
